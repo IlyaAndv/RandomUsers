@@ -25,7 +25,6 @@ final class NetworkManager {
                 print(error?.localizedDescription ?? "No error description")
                 return
             }
-            
             do {
                 let dataModel = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {
@@ -37,5 +36,4 @@ final class NetworkManager {
             }
         }.resume()
     }
-    
 }

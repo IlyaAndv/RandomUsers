@@ -7,11 +7,6 @@
 
 import Foundation
 
-
-
-
-
-
 struct Person: Decodable {
     let results: [User]
     let info: Info
