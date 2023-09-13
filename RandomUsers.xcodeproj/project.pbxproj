@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		7AA7EF522AAF47070034D9D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA7EF512AAF47070034D9D0 /* AppDelegate.swift */; };
 		7AA7EF542AAF47070034D9D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA7EF532AAF47070034D9D0 /* SceneDelegate.swift */; };
-		7AA7EF562AAF47070034D9D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA7EF552AAF47070034D9D0 /* ViewController.swift */; };
+		7AA7EF562AAF47070034D9D0 /* WellcomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA7EF552AAF47070034D9D0 /* WellcomViewController.swift */; };
 		7AA7EF592AAF47070034D9D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA7EF572AAF47070034D9D0 /* Main.storyboard */; };
 		7AA7EF5B2AAF47080034D9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AA7EF5A2AAF47080034D9D0 /* Assets.xcassets */; };
 		7AA7EF5E2AAF47080034D9D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA7EF5C2AAF47080034D9D0 /* LaunchScreen.storyboard */; };
+		7AA979E92AB1DC8A0034C3FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA979E82AB1DC8A0034C3FD /* User.swift */; };
+		7AA979EC2AB1DCEA0034C3FD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA979EB2AB1DCEA0034C3FD /* NetworkManager.swift */; };
+		7AA979EF2AB1DD430034C3FD /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA979EE2AB1DD430034C3FD /* DataStore.swift */; };
+		7AA979F12AB1DF220034C3FD /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA979F02AB1DF220034C3FD /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7AA7EF4E2AAF47070034D9D0 /* RandomUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA7EF512AAF47070034D9D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AA7EF532AAF47070034D9D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7AA7EF552AAF47070034D9D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7AA7EF552AAF47070034D9D0 /* WellcomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomViewController.swift; sourceTree = "<group>"; };
 		7AA7EF582AAF47070034D9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7AA7EF5A2AAF47080034D9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AA7EF5D2AAF47080034D9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AA7EF5F2AAF47080034D9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AA979E82AB1DC8A0034C3FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7AA979EB2AB1DCEA0034C3FD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7AA979EE2AB1DD430034C3FD /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		7AA979F02AB1DF220034C3FD /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +64,12 @@
 		7AA7EF502AAF47070034D9D0 /* RandomUsers */ = {
 			isa = PBXGroup;
 			children = (
-				7AA7EF652AAF472F0034D9D0 /* SupportingFiles */,
 				7AA7EF662AAF47860034D9D0 /* ViewControllers */,
-				7AA7EF672AAF479A0034D9D0 /* Storuboards */,
+				7AA979EA2AB1DC900034C3FD /* Models */,
+				7AA979ED2AB1DCF00034C3FD /* Services */,
+				7AA7EF672AAF479A0034D9D0 /* Storyboards */,
 				7AA7EF5A2AAF47080034D9D0 /* Assets.xcassets */,
+				7AA7EF652AAF472F0034D9D0 /* SupportingFiles */,
 			);
 			path = RandomUsers;
 			sourceTree = "<group>";
@@ -77,18 +87,36 @@
 		7AA7EF662AAF47860034D9D0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7AA7EF552AAF47070034D9D0 /* ViewController.swift */,
+				7AA7EF552AAF47070034D9D0 /* WellcomViewController.swift */,
+				7AA979F02AB1DF220034C3FD /* ResultViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		7AA7EF672AAF479A0034D9D0 /* Storuboards */ = {
+		7AA7EF672AAF479A0034D9D0 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				7AA7EF572AAF47070034D9D0 /* Main.storyboard */,
 				7AA7EF5C2AAF47080034D9D0 /* LaunchScreen.storyboard */,
 			);
-			path = Storuboards;
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7AA979EA2AB1DC900034C3FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7AA979E82AB1DC8A0034C3FD /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7AA979ED2AB1DCF00034C3FD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7AA979EB2AB1DCEA0034C3FD /* NetworkManager.swift */,
+				7AA979EE2AB1DD430034C3FD /* DataStore.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +190,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AA7EF562AAF47070034D9D0 /* ViewController.swift in Sources */,
+				7AA979E92AB1DC8A0034C3FD /* User.swift in Sources */,
+				7AA979EF2AB1DD430034C3FD /* DataStore.swift in Sources */,
+				7AA979F12AB1DF220034C3FD /* ResultViewController.swift in Sources */,
+				7AA979EC2AB1DCEA0034C3FD /* NetworkManager.swift in Sources */,
+				7AA7EF562AAF47070034D9D0 /* WellcomViewController.swift in Sources */,
 				7AA7EF522AAF47070034D9D0 /* AppDelegate.swift in Sources */,
 				7AA7EF542AAF47070034D9D0 /* SceneDelegate.swift in Sources */,
 			);
